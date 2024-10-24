@@ -192,6 +192,33 @@ In the sidebar, click on Home (it may be represented by a little house icon).
 The name of the folder is your username.
 
 
+-------
+https://www.reddit.com/r/MacOS/comments/14jy8h7/comment/lbsmks9/
+
+
+Instructions for installing iMessage-exporter for people who don't code:
+
+1.      First install Rust which contains Cargo:
+a.      Open Terminal by going to Finder, Utilities, Terminal
+b.      Type this: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+c.      Hit enter
+d.      Hit enter again when it prompts you if you want to customize or proceed with standard installation
+e.      Close the Terminal window by hitting X (this makes Rust take effect)
+
+2.      Now install the iMesssage-exporter tool
+a.      Reopen Terminal by going to Finder, Utilities, Terminal
+b.      Type this: cargo install imessage-exporter. This will run for a bit and then throw an error.
+c.      You will be asked to install command line developer tools. 
+d.      Tap on “install”.
+e.      Tap on “Agree” to the terms and conditions. This install takes a good few minutes so be patient.
+f.       Now go back to that Terminal window and rerun the cargo install:
+g.      Tap on the Terminal, arrow up to bring back the last command, then hit enter.
+
+3.      You are ready to run iMessage-exporter. Note that this will run for a while, depending on how many text messages you have downloaded in the Messages app. In your Terminal window, type this command (where XXXXXX is your Mac username): /Users/XXXXXX/.cargo/bin/imessage-exporter -f html -c compatible 
+
+4.      To find the exported files, open Finder and navigate to /Users/XXXXXX/imessage_export. They are html files and named after the phone number. Sort them by size to easily locate your top contacts.
+
+
 ## Special Thanks
 
 - All of my friends, for putting up with me sending them random messages to test things
